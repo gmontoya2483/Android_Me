@@ -20,13 +20,11 @@ import java.util.List;
 
 public class BodyPartFragment extends Fragment {
 
+    // TODO (3) Create final Strings to store state information about the list of images and list index
+
     //Tag for logging
     private static final String TAG = "BodyPartFragment";
 
-    // TODO (1) Create a setter method and class variable to set and store of a list of image resources
-
-    // TODO (2) Create another setter method and variable to track and set the index of the list item to display
-    // ex. index = 0 is the first image id in the given list , index 1 is the second, and so on
 
     // Variables to store a list of image resources and the index of the image that this fragment displays
     private List<Integer> mImagesIds;
@@ -51,11 +49,15 @@ public class BodyPartFragment extends Fragment {
         ImageView imageView=(ImageView) rootView.findViewById(R.id.body_part_image_view);
 
 
-        // TODO (3) If a list of image ids exists, set the image resource to the correct item in that list
-        // Otherwise, create a Log statement that indicates that the list was not found
+
         if (mImagesIds!=null){
             //Set the image resource to display
             imageView.setImageResource(mImagesIds.get(mListIndex));
+
+            // TODO (1) Set a click listener on the image view and on a click increment the list index and set the image resource
+            // TODO (2) If you reach the end of a list of images, set the list index back to 0 (the first item in the list)
+
+
 
         }else{
             Log.e(TAG, getString(R.string.log_empty_list));
@@ -78,4 +80,7 @@ public class BodyPartFragment extends Fragment {
     public void setListIndex(int mListIndex) {
         this.mListIndex = mListIndex;
     }
+
+    // TODO (4) Override onSaveInstanceState and save the current state of this fragment
+
 }

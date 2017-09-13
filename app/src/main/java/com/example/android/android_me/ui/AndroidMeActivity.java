@@ -36,9 +36,12 @@ public class AndroidMeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_android_me);
 
 
+        // TODO (5) Only create new fragments when there is no previously saved state
+
+
         BodyPartFragment headFragment=new BodyPartFragment();
 
-        // TODO (4) Set the list of image id's for the head fragment and set the position to the second image in the list
+
         headFragment.setImagesIds(AndroidImageAssets.getHeads());
         headFragment.setListIndex(2);
 
@@ -50,7 +53,6 @@ public class AndroidMeActivity extends AppCompatActivity {
                 .add(R.id.head_container,headFragment) //R.id.head_container is the ID of the frame which contains the fragment <FramaLayout.../>
                 .commit();
 
-        // TODO (5) Create and display the body and leg BodyPartFragments
 
 
         BodyPartFragment bodyFragment=new BodyPartFragment();
