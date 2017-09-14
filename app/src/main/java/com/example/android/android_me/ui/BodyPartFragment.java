@@ -21,7 +21,6 @@ import java.util.List;
 
 public class BodyPartFragment extends Fragment {
 
-    // TODO (3) Create final Strings to store state information about the list of images and list index
     // Final Strings to store state information about the list of images and list index
     public static final String IMAGE_ID_LIST = "image_ids";
     public static final String LIST_INDEX = "list_index";
@@ -61,8 +60,6 @@ public class BodyPartFragment extends Fragment {
         final ImageView imageView=(ImageView) rootView.findViewById(R.id.body_part_image_view);
 
 
-        // TODO (1) Set a click listener on the image view and on a click increment the list index and set the image resource
-        // TODO (2) If you reach the end of a list of images, set the list index back to 0 (the first item in the list)
 
         if (mImagesIds!=null){
             //Set the image resource to display
@@ -114,7 +111,6 @@ public class BodyPartFragment extends Fragment {
         this.mListIndex = mListIndex;
     }
 
-    // TODO (4) Override onSaveInstanceState and save the current state of this fragment
 
     /**
      * Save the current state of this fragment
