@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import com.example.android.android_me.R;
 
-// TODO (4) Implement the MasterListFragment callback, OnImageClickListener
+
 public class MainActivity extends AppCompatActivity implements MasterListFragment.OnImageClickListener {
 
 
@@ -19,13 +19,20 @@ public class MainActivity extends AppCompatActivity implements MasterListFragmen
         setContentView(R.layout.activity_main);
     }
 
-    // TODO (5) Define the behavior for onImageSelected; create a Toast that displays the position clicked
+
     // Define the behavior for onImageSelected
     @Override
     public void onImageSelected(int position) {
 
         // Create a Toast that displays the position that was clicked
         Toast.makeText(this, "Position clicked = " + position, Toast.LENGTH_SHORT).show();
+
+        // TODO (2) Based on where a user has clicked, store the selected list index for the head, body, and leg BodyPartFragments
+
+        // TODO (3) Put this information in a Bundle and attach it to an Intent that will launch an AndroidMeActivity
+
+        // TODO (4) Get a reference to the "Next" button and launch the intent when this button is clicked
+
 
 
     }
