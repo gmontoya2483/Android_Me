@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- GridView that displays AndroidMe images -->
-<!-- TODO (1) Turn this into a LinearLayout and add a "Next" button at the bottom of the gridview -->
-
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"

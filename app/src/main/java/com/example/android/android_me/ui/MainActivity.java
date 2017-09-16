@@ -19,10 +19,17 @@ public class MainActivity extends AppCompatActivity implements MasterListFragmen
     private int legIndex;
 
 
+    // TODO (3) Create a variable to track whether to display a two-pane or single-pane UI
+    // A single-pane display refers to phone screens, and two-pane to larger tablet screens
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // TODO (4) If you are making a two-pane display, add new BodyPartFragments to create an initial Android-Me image
+        // Also, for the two-pane display, get rid of the "Next" button in the master list fragment
     }
 
 
@@ -34,7 +41,12 @@ public class MainActivity extends AppCompatActivity implements MasterListFragmen
         Toast.makeText(this, "Position clicked = " + position, Toast.LENGTH_SHORT).show();
 
 
-        // TODO (2) Based on where a user has clicked, store the selected list index for the head, body, and leg BodyPartFragments
+        // TODO (5) Handle the two-pane case and replace existing fragments right when a new image is selected from the master list
+        // The two-pane case will not need a Bundle or Intent since a new activity will not be started;
+        // This is all happening in this MainActivity and one fragment will be replaced at a time
+
+
+
         // Based on where a user has clicked, store the selected list index for the head, body, and leg BodyPartFragments
 
         // bodyPartNumber will be = 0 for the head fragment, 1 for the body, and 2 for the leg fragment
@@ -58,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements MasterListFragmen
 
 
 
-        // TODO (3) Put this information in a Bundle and attach it to an Intent that will launch an AndroidMeActivity
+
         // Put this information in a Bundle and attach it to an Intent that will launch an AndroidMeActivity
         Bundle b = new Bundle();
         b.putInt("headIndex", headIndex);
@@ -71,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements MasterListFragmen
 
 
 
-        // TODO (4) Get a reference to the "Next" button and launch the intent when this button is clicked
+
 
         // The "Next" button launches a new AndroidMeActivity
         Button nextButton = (Button) findViewById(R.id.next_button);
